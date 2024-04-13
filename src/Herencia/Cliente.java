@@ -1,14 +1,21 @@
+package herencia;
 
-package Herencia;
+import javax.swing.JOptionPane;
 
+public class Cliente extends Herencia {
+private String Direccion;
 
-public class Cliente extends Persona {
-    private String categoria;
-    public Cliente(String nombre,String apellido, String documento, String categoria){
-        super(nombre, apellido, documento);
-        this.categoria=categoria;
+    public Cliente(String Direccion, String Nombre, int Edad) {
+        super(Nombre, Edad);
+        this.Direccion = Direccion;
     }
-public String mostrarDatos(){
-    return getNombre()+"Apellido/n"+getApellido()+"Documento/n"+getDocumento()+"Categoria"+Categoria;
-}   
+
+    public String getDireccion() {
+        return Direccion;
+    }
+public void mostrarCliente (){
+  JOptionPane.showMessageDialog(null, "el nombre es"+getNombre()+
+                                       "\nsu edad es" +getEdad()+
+                                       "\nsu direccion es"+getDireccion());
+}
 }
